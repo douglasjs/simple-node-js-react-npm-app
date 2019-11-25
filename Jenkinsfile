@@ -10,10 +10,8 @@ pipeline {
             steps {
                /* sh 'npm install' */
                	sh """ #!/bin/bash
-					rm -rf ./*
 					node -v
 					npm -v
-					docker -v
 					pwd
 				"""
             }
