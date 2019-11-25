@@ -8,7 +8,14 @@ pipeline {
     stages {
         stage('Build') { 
             steps {
-                sh 'npm install' 
+               /* sh 'npm install' */
+               	sh """ #!/bin/bash
+					rm -rf ./*
+					node -v
+					npm -v
+					sudo docker -v
+					pwd
+				"""
             }
         }
     }
