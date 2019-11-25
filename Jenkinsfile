@@ -19,6 +19,7 @@ pipeline {
 			pwd
 			ls -alF
 			npm install
+			npm audit fix
 		   """
             }
         }
