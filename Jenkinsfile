@@ -13,7 +13,7 @@ pipeline {
 					rm -rf ./*
 					node -v
 					npm -v
-					sudo docker -v
+					docker -v
 					pwd
 				"""
             }
