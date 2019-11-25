@@ -19,7 +19,6 @@ pipeline {
 			pwd
 			ls -alF
 			npm install
-			npm audit fix
 		   """
             }
         }
@@ -51,7 +50,6 @@ pipeline {
 			 sh 'mkdir ./oc'
 			 sh  """  tar -czf ${containerTag}.tar.gz \
 					build \
-					-T - \
 			     """
 			 sh "mv ${containerTag}.tar.gz ./oc"
 		         sh "ls -alF ./oc"
