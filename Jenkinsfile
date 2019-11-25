@@ -36,6 +36,7 @@ pipeline {
 	    steps{
 			 echo "========Building========"
 			 sh 'npm run build'
+		         /*
 			 echo "========Packaging========"
 			 sh 'mkdir ./oc'
 			 sh  """ find . -name "*.sh" -type f | tar -czf ${containerTag}.tar.gz \
@@ -45,6 +46,15 @@ pipeline {
 					-T - \
 			     """
 			 sh "mv ${containerTag}.tar.gz ./oc"
+			 */
+		    	  echo "========Packaging========"
+			 sh 'mkdir ./oc'
+			 sh  """  tar -czf ${containerTag}.tar.gz \
+					build \
+					-T - \
+			     """
+			 sh "mv ${containerTag}.tar.gz ./oc"
+		         sh "ls -alF ./oc"
 		}
 	}
 	/*
