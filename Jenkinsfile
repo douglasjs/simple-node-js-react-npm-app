@@ -13,6 +13,7 @@ pipeline {
 					node -v
 					npm -v
 					pwd
+					ls -alF
 				"""
             }
         }
